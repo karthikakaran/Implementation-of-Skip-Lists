@@ -1,0 +1,148 @@
+<PRE>
+CS 4V95.003, CS 5V81.012.  Implementation of data structures and algorithms
+Fall 2016;  Tue, Oct 4
+Mandatory Project 2: Skip lists
+
+Ver 1.0: Initial description (Oct 4, 8:30 PM).
+Ver 1.1: 11:30 AM, Oct 5.  Return type of add() changed from void to boolean.
+			   Return type of remove() changed to T.
+Ver 1.2: 8:45 PM, Oct 16.  Added extra lines of explanation for findIndex().
+			   Note that index of first element is 0.
+
+This is a mandatory project, to be done individually. 
+Max excellence credits (EC): 1.0 
+Only submissions before 1st deadline are eligible for EC.
+
+Due: 11:59 PM, Sun, Oct 23 (1st deadline),  Sun, Nov 6 (2nd deadline).
+
+Code base: 
+Skip list interface:
+<A HREF="http://www.utdallas.edu/~rbk/teach/2016f/java/code/SkipList.java">http://www.utdallas.edu/~rbk/teach/2016f/java/code/SkipList.java</A>
+
+Skeleton of Skip list implementation:
+<A HREF="http://www.utdallas.edu/~rbk/teach/2016f/java/code/SkipListImpl.java">http://www.utdallas.edu/~rbk/teach/2016f/java/code/SkipListImpl.java</A>
+
+Driver file for Skip list project:
+<A HREF="http://www.utdallas.edu/~rbk/teach/2016f/java/code/SkipListDriver.java">http://www.utdallas.edu/~rbk/teach/2016f/java/code/SkipListDriver.java</A>
+
+Do not use any data structures from Java's library for lists.  
+Write the code from scratch.
+
+
+Project Description:
+
+(a) Implement <A HREF="http://en.wikipedia.org/wiki/Skip_list">skip lists (see http://en.wikipedia.org/wiki/Skip_list)</A>.
+(b) Compare its performance with Java's TreeMap.
+
+
+(a) Implementation (80 points):
+The skip list interface is given below:
+
+
+/** See  http://en.wikipedia.org/wiki/Skip_list
+ */
+
+import java.lang.Comparable;
+import java.util.Iterator;
+
+public interface SkipList<T extends Comparable<? super T>> {
+
+    boolean add(T x);  // Add an element x to the list
+
+    T ceiling(T x); // Least element that is >= x, or null if no such element
+
+    boolean contains(T x);  // Is x in the list?
+
+    T findIndex(int n);  // Return the element at index n in the list
+			 // First element of list is at index 0
+
+    T first();  // Return the first element of the list
+
+    T floor(T x);  // Greatest element that is <= x, or null if no such element
+
+    boolean isEmpty();  // Is the list empty?
+
+    Iterator<T> iterator();  // Returns an iterator for the list
+
+    T last();  // Return the last element of the list
+
+    void rebuild();  // Rebuild this list into a perfect skip list
+
+    T remove(T x);  // Remove x from this list
+		    // returns element removed, null if x is not in list
+
+    int size();  // Number of elements in the list
+}
+
+
+
+Details of driver program and input/output specifications:
+
+A driver program is provided that creates and modifies a skip list,
+whose elements are of type Long.
+
+The following operations are handled by the driver program.  The value
+returned by each operation is accumulated in variable "result," and
+its value is printed as the final output of the program.
+
+a. Add x: Add new items to the skip list; contributes 1 to result.
+
+b. Ceiling x: Find least element that is >= x; returned value is
+   added to result, or 0 if no such element
+
+c. FindIndex x: Find the element at the index position x; returned value
+   is added to result (0 if there is no element in that index).
+   Note that the first element of the list is at index 0.
+
+d. First: Find the first element; value of returned element is added to result.
+
+e. Last: Find the last element; value of returned element is added to result.
+
+f. Floor x: Find the Greatest element that is <= x, returned value is
+   added to result, or 0 if no such element.
+
+g. Remove x: Remove x from this list; add 1 to result if x is in the list.
+
+h. Contains x: Add 1 to result if x is in the list.
+
+
+Finally the program outputs the contents of the variable "result"
+(mod p, to avoid overflow) and the time taken. 
+
+
+
+Summary: Implement the skip list, making sure you override all the methods
+from the interface, without changing their signatures.
+
+
+Sample input:
+  Add 1
+  Add 2
+  Add 13
+  First
+  Last
+  Ceiling 10
+  Remove 1
+  Remove 22
+  End
+
+Output:
+  31
+
+Explanation:
+  Add 1 //returns 1
+  Add 2 // returns 1
+  Add 13 // returns 1
+  First //returns 1
+  Last // returns 13
+  Ceiling 10 //returns 13
+  Remove 1 //returns 1
+  Remove 22 //returns 0
+  End
+
+
+(b) Comparison of Skip lists and tree maps (20 points):
+Evaluate the performance of skip lists and tree maps on randomly generated
+inputs, over the following operations:  Add, Contains, Remove.
+
+</PRE>
