@@ -1,0 +1,150 @@
+Mandatory Project - 2:
+SkipList and TreeMap
+****************************************************************
+Instructions : Compile and run with one of the arguments
+
+compile : javac -Xlint SkipListDriver.java  : For SkipListClass
+	  javac -Xlint TreeMapClass.java    : For TreeMap
+run : java SkipListDriver args[0] (path of the input file)
+      java TreeMapClass   args[0] (path of the input file)
+****************************************************************
+
+a1.txt
+************************************
+Skip List :
+117
+Time: 7 msec.
+Memory: 1 MB / 119 MB.
+
+a2.txt
+*************************************
+584
+Time: 13 msec.
+Memory: 1 MB / 119 MB.
+
+a3.txt
+*************************************
+2583
+Time: 14 msec.
+Memory: 1 MB / 119 MB.
+
+a4.txt
+*************************************
+54501
+Time: 30 msec.
+Memory: 2 MB / 119 MB.
+
+a5.txt
+*************************************
+539108
+Time: 147 msec.
+Memory: 14 MB / 119 MB.
+
+a6.txt
+*************************************
+343528
+Time: 354 msec.
+Memory: 10 MB / 150 MB.
+
+a7.txt
+*************************************
+858099
+Time: 467 msec.
+Memory: 8 MB / 150 MB.
+
+a8.txt
+*************************************
+130122
+Time: 3093 msec.
+Memory: 421 MB / 614 MB.
+
+a9.txt
+*************************************
+626281
+Time: 3362 msec.
+Memory: 475 MB / 609 MB.
+
+b1.txt
+*************************************
+36
+Time: 7 msec.
+Memory: 1 MB / 119 MB.
+
+b2.txt
+*************************************
+73
+Time: 13 msec.
+Memory: 1 MB / 119 MB.
+
+b3.txt
+*************************************
+150
+Time: 14 msec.
+Memory: 1 MB / 119 MB.
+
+b4.txt
+*************************************
+721
+Time: 40 msec.
+Memory: 3 MB / 119 MB.
+
+b5.txt
+*************************************
+7097
+Time: 136 msec.
+Memory: 15 MB / 119 MB.
+
+b6.txt
+*************************************
+35313
+Time: 315 msec.
+Memory: 9 MB / 150 MB.
+
+b7.txt
+*************************************
+70918
+Time: 490 msec.
+Memory: 21 MB / 150 MB.
+
+b8.txt
+*************************************
+709447
+Time: 3406 msec.
+Memory: 516 MB / 612 MB.
+
+t1.txt
+*************************************
+303572
+Time: 33 msec.
+Memory: 3 MB / 119 MB.
+
+t2.txt
+*************************************
+995387
+Time: 490 msec.
+Memory: 8 MB / 150 MB.
+
+t3.txt
+*************************************
+745516
+Time: 3203 msec.
+Memory: 437 MB / 600 MB.
+
+t5.txt
+*************************************
+139367
+Time: 621 msec.
+Memory: 14 MB / 212 MB.
+
+t6.txt
+*************************************
+393166
+Time: 5430 msec.
+Memory: 342 MB / 713 MB.
+
+t7.txt
+*************************************
+933025
+Time: 78138 msec.
+Memory: 798 MB / 1398 MB.
+
